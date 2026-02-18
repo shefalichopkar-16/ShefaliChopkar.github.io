@@ -9,70 +9,104 @@
     html { scroll-behavior: smooth; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-white text-slate-900">
 
   <!-- HERO -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 space-y-4">
-    <h1 class="text-5xl font-bold">Your Name</h1>
-    <p class="text-xl text-slate-600">Engineering Leader — Engineer to Manager Journey</p>
-    <p class="max-w-xl text-slate-500">
-      I build reliable systems and grow engineers into leaders. Explore my journey below.
-    </p>
+  <section class="min-h-screen flex items-center justify-center px-6">
+    <div class="max-w-5xl w-full grid md:grid-cols-2 gap-12 items-center">
+      
+      <!-- PHOTO -->
+      <div class="flex justify-center md:justify-end">
+        <img src="profile.jpg" alt="Profile Photo" 
+             class="w-64 h-64 object-cover rounded-2xl shadow-xl" />
+      </div>
+
+      <!-- INTRO -->
+      <div class="space-y-6">
+        <h1 class="text-5xl font-bold tracking-tight">Your Name</h1>
+        <p class="text-xl text-slate-600">Engineering Leader</p>
+        <p class="text-slate-500 leading-relaxed">
+          I build reliable, high-impact systems and develop engineers into confident leaders. 
+          My work sits at the intersection of technology execution, delivery confidence, 
+          and measurable business outcomes.
+        </p>
+        <div class="flex gap-4 pt-4">
+          <a href="mailto:your.email@example.com" 
+             class="px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-700 transition">
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- JOURNEY SELECTOR -->
-  <section class="sticky top-0 bg-white/80 backdrop-blur border-y py-4 flex justify-center gap-4 z-10">
-    <button onclick="showSection('engineer')" class="px-4 py-2 rounded-xl bg-slate-900 text-white">Engineer</button>
-    <button onclick="showSection('manager')" class="px-4 py-2 rounded-xl bg-slate-200">Manager</button>
-    <button onclick="showSection('leader')" class="px-4 py-2 rounded-xl bg-slate-200">Leader</button>
+  <!-- JOURNEY NAV -->
+  <section class="border-t border-b bg-slate-50">
+    <div class="max-w-4xl mx-auto px-6 py-6 flex justify-center gap-8 text-sm font-medium tracking-wide">
+      <button onclick="showSection('engineer')" class="nav-btn text-slate-900">Engineer</button>
+      <button onclick="showSection('manager')" class="nav-btn text-slate-400">Manager</button>
+      <button onclick="showSection('leader')" class="nav-btn text-slate-400">Leader</button>
+    </div>
   </section>
 
   <!-- ENGINEER -->
-  <section id="engineer" class="journey py-20 max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">Engineer Phase</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="p-6 bg-white rounded-2xl shadow">
-        <h3 class="font-semibold mb-2">System Design</h3>
-        <p class="text-slate-600">Designed scalable ecommerce modules with performance-first thinking.</p>
+  <section id="engineer" class="journey py-24 max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-12">Engineer</h2>
+    <div class="space-y-10">
+      <div>
+        <h3 class="font-semibold text-lg">System Design & Performance</h3>
+        <p class="text-slate-600 mt-2">
+          Designed scalable ecommerce modules with performance-first thinking and clear ownership boundaries.
+        </p>
       </div>
-      <div class="p-6 bg-white rounded-2xl shadow">
-        <h3 class="font-semibold mb-2">Incident Ownership</h3>
-        <p class="text-slate-600">Led production issue triage and improved observability.</p>
+      <div>
+        <h3 class="font-semibold text-lg">Production Reliability</h3>
+        <p class="text-slate-600 mt-2">
+          Led incident triage, improved observability, and reduced recurring failure patterns.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- MANAGER -->
-  <section id="manager" class="journey hidden py-20 max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">Manager Phase</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="p-6 bg-white rounded-2xl shadow">
-        <h3 class="font-semibold mb-2">Team Scaling</h3>
-        <p class="text-slate-600">Built ownership culture and mentored senior engineers.</p>
+  <section id="manager" class="journey hidden py-24 max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-12">Manager</h2>
+    <div class="space-y-10">
+      <div>
+        <h3 class="font-semibold text-lg">Team Scaling</h3>
+        <p class="text-slate-600 mt-2">
+          Built ownership culture, mentored senior engineers, and developed technical decision-makers.
+        </p>
       </div>
-      <div class="p-6 bg-white rounded-2xl shadow">
-        <h3 class="font-semibold mb-2">Delivery Confidence</h3>
-        <p class="text-slate-600">Introduced release gates and improved predictability.</p>
+      <div>
+        <h3 class="font-semibold text-lg">Delivery Confidence</h3>
+        <p class="text-slate-600 mt-2">
+          Introduced release gates, structured tradeoff reviews, and improved predictability across stakeholders.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- LEADER -->
-  <section id="leader" class="journey hidden py-20 max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">Leadership Philosophy</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="p-6 bg-white rounded-2xl shadow">
-        <h3 class="font-semibold mb-2">Business Alignment</h3>
-        <p class="text-slate-600">Technology decisions anchored in revenue and customer outcomes.</p>
+  <section id="leader" class="journey hidden py-24 max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-12">Leader</h2>
+    <div class="space-y-10">
+      <div>
+        <h3 class="font-semibold text-lg">Business Alignment</h3>
+        <p class="text-slate-600 mt-2">
+          Technology strategy anchored in revenue impact, customer experience, and long-term capability building.
+        </p>
       </div>
-      <div class="p-6 bg-white rounded-2xl shadow">
-        <h3 class="font-semibold mb-2">Growing Leaders</h3>
-        <p class="text-slate-600">Focus on context, autonomy, and long-term capability building.</p>
+      <div>
+        <h3 class="font-semibold text-lg">Growing Leaders</h3>
+        <p class="text-slate-600 mt-2">
+          Focused on context sharing, autonomy with accountability, and building sustainable engineering cultures.
+        </p>
       </div>
     </div>
   </section>
 
-  <footer class="py-10 text-center text-sm text-slate-500">
+  <footer class="py-16 text-center text-sm text-slate-400 border-t">
     © 2026 Your Name
   </footer>
 
@@ -81,13 +115,13 @@
       document.querySelectorAll('.journey').forEach(sec => sec.classList.add('hidden'));
       document.getElementById(id).classList.remove('hidden');
 
-      document.querySelectorAll('section button').forEach(btn => {
-        btn.classList.remove('bg-slate-900','text-white');
-        btn.classList.add('bg-slate-200');
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('text-slate-900');
+        btn.classList.add('text-slate-400');
       });
 
-      event.target.classList.remove('bg-slate-200');
-      event.target.classList.add('bg-slate-900','text-white');
+      event.target.classList.remove('text-slate-400');
+      event.target.classList.add('text-slate-900');
     }
   </script>
 
