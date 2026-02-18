@@ -3,206 +3,173 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interactive Leadership Site</title>
+  <title>Shefali Chopkar | Engineering Leader</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
   </style>
 </head>
-<body class="min-h-screen bg-slate-50 text-slate-800">
+<body class="min-h-screen bg-slate-50 text-slate-800 antialiased">
 
   <!-- HERO -->
-  <section class="h-screen flex flex-col justify-center items-center text-center space-y-4 px-6">
+  <section class="py-20 flex flex-col justify-center items-center text-center space-y-6 px-6">
     <img src="DSC_0010.jpg" class="w-50 h-80 object-cover rounded-2xl shadow-lg" />
-    <h1 class="text-5xl font-bold">Your Name</h1>
-    <p class="text-xl text-slate-600">Engineering Manager — Ecommerce Platforms</p>
-    <p class="max-w-xl text-slate-500">
-      I work with engineers to improve reliability, delivery confidence, and customer outcomes in ecommerce systems.
+    <h1 class="text-5xl font-semibold tracking-tight">Shefali Chopkar</h1>
+    <p class="text-xl text-slate-600 font-medium">Engineering Manager · Technology & People Leader</p>
+    <p class="max-w-2xl text-slate-500">
+      I lead engineering organizations that deliver measurable business outcomes. I develop leaders, scale resilient platforms, and align execution with strategic priorities.
     </p>
+    <a href="ShefaliChopkarResume.pdf" target="_blank" class="mt-4 px-6 py-3 bg-slate-900 text-white rounded-xl hover:opacity-90 transition">
+      View Resume
+    </a>
+    <div class="pt-6 text-sm text-slate-500 space-y-1">
+      <div>+91 9096413117</div>
+      <div>Shefali.Chopkar@gmail.com</div>
+    </div>
   </section>
 
   <!-- JOURNEY SELECTOR -->
-  <section class="sticky top-0 bg-white/80 backdrop-blur border-y py-4 flex justify-center gap-3 z-10">
-    <button onclick="setPath('hiring', event)" class="path-btn px-4 py-2 rounded-xl bg-slate-900 text-white">hiring</button>
-    <button onclick="setPath('recruiter', event)" class="path-btn px-4 py-2 rounded-xl bg-white border">recruiter</button>
-    <button onclick="setPath('engineer', event)" class="path-btn px-4 py-2 rounded-xl bg-white border">engineer</button>
-    <button onclick="setPath('product', event)" class="path-btn px-4 py-2 rounded-xl bg-white border">product</button>
+  <section class="sticky top-0 bg-white/80 backdrop-blur border-y py-4 flex justify-center gap-4 z-10">
+    <button onclick="setPath('leadership', event)" class="path-btn px-4 py-2 rounded-xl bg-slate-900 text-white">Leadership</button>
+    <button onclick="setPath('technology', event)" class="path-btn px-4 py-2 rounded-xl bg-white border">Technology</button>
+    <button onclick="setPath('people', event)" class="path-btn px-4 py-2 rounded-xl bg-white border">People</button>
+    <button onclick="setPath('delivery', event)" class="path-btn px-4 py-2 rounded-xl bg-white border">Delivery</button>
   </section>
 
-  <!-- DECISION APPROACH -->
-  <section class="py-24 max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-10 text-center">Decision Approach</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div onclick="focusCard(this)" class="cursor-pointer p-6 rounded-2xl shadow bg-white transition hover:scale-105">
-        <h3 class="font-semibold">Checkout latency vs feature launch</h3>
-        <p class="text-slate-600">
-          In ecommerce, conversion > feature count. I delayed release to fix p95 latency because revenue loss compounds daily.
-        </p>
-      </div>
-      <div onclick="focusCard(this)" class="cursor-pointer p-6 rounded-2xl shadow bg-white transition hover:scale-105">
-        <h3 class="font-semibold">Tech debt vs roadmap pressure</h3>
-        <p class="text-slate-600">
-          I schedule debt like product work. If ignored for 3 sprints, velocity collapse becomes guaranteed future cost.
-        </p>
-      </div>
-    </div>
-  </section>
+  <!-- JOURNEY CONTENT -->
+  <section id="journeyContent" class="py-16 max-w-5xl mx-auto px-6"></section>
 
   <!-- BUSINESS OUTCOMES -->
-  <section class="py-24 max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-10 text-center">Business Outcomes</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div onclick="focusCard(this)" class="cursor-pointer p-6 rounded-2xl shadow bg-white transition hover:scale-105 text-sm space-y-1">
-        <div><b>Problem:</b> Frequent cart failures</div>
-        <div><b>Decision:</b> Introduced ownership + observability</div>
-        <div><b>Outcome:</b> Reduced drop-offs</div>
+  <section class="py-16 max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold tracking-tight mb-12 text-center">Business Impact</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="p-8 rounded-2xl shadow bg-white text-sm space-y-3">
+        <div><b>Enterprise Rollouts:</b> Multi-region expansion of Sales Platform</div>
+        <div><b>Scalable Architecture:</b> Built foundations for global expansion and reuse</div>
       </div>
-      <div onclick="focusCard(this)" class="cursor-pointer p-6 rounded-2xl shadow bg-white transition hover:scale-105 text-sm space-y-1">
-        <div><b>Problem:</b> Slow releases</div>
-        <div><b>Decision:</b> Deployment confidence gates</div>
-        <div><b>Outcome:</b> Predictable launches</div>
+      <div class="p-8 rounded-2xl shadow bg-white text-sm space-y-3">
+        <div><b>Financial & Operational Reliability:</b> Strengthened reconciliation and reporting systems</div>
+        <div><b>Outcome:</b> Auditability, transparency, and executive confidence</div>
       </div>
-    </div>
-  </section>
-
-  <!-- LESSONS LEARNED -->
-  <section class="py-24 max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-10 text-center">Lessons Learned</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div onclick="focusCard(this)" class="cursor-pointer p-6 rounded-2xl shadow bg-white transition hover:scale-105">
-        <h3 class="font-semibold">Protected team too much</h3>
-        <p class="text-slate-600">
-          I filtered stakeholders excessively — team lost business context. Now I expose context early instead of shielding pressure.
-        </p>
-      </div>
-      <div onclick="focusCard(this)" class="cursor-pointer p-6 rounded-2xl shadow bg-white transition hover:scale-105">
-        <h3 class="font-semibold">Chased perfect architecture</h3>
-        <p class="text-slate-600">
-          In commerce, timing beats elegance. I now design for iteration not perfection.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- BELIEFS -->
-  <section class="py-24 max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-10 text-center">Evolving Perspectives</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">Good engineers need autonomy</div>
-      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">Clarity > autonomy</div>
-      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">Ownership > clarity</div>
-      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">Context > ownership</div>
     </div>
   </section>
 
   <!-- TEAM HEALTH -->
-  <section class="py-24 max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-10 text-center">Signals I Monitor</h2>
+  <section class="py-16 max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold tracking-tight mb-12 text-center">What I Build in Teams</h2>
     <div class="grid md:grid-cols-2 gap-6">
-      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">PR review turnaround</div>
-      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">Silent disengagement</div>
-      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">Incident ownership</div>
-      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">Decision latency</div>
+      <div class="p-6 bg-white rounded-2xl shadow">Psychological Safety, Empathy & High Accountability</div>
+      <div class="p-6 bg-white rounded-2xl shadow">Balanced Business & Technical Work to Keep Teams Engaged</div>
     </div>
   </section>
 
-  <!-- ASK ME -->
-  <section class="max-w-2xl mx-auto py-20 px-6">
-    <div class="rounded-2xl shadow-lg bg-white p-8 space-y-6">
-      <h2 class="text-2xl font-semibold">Get In Touch</h2>
-      <p class="text-slate-600 text-sm">
-        Have a question about engineering leadership, reliability, or ecommerce systems?
-        Send me a note and I’ll get back to you.
-      </p>
+  <!-- DECISION APPROACHES -->
+  <section class="py-16 max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold tracking-tight mb-12 text-center">Decision Frameworks & Strategic Trade-Offs</h2>
 
-      <form id="contactForm" class="space-y-4" onsubmit="submitQuestion(event)">
-        <!-- Replace FORM_URL and entry IDs below with your actual Google Form values -->
-        <div>
-          <label class="block text-sm font-medium mb-1">Your Name</label>
-          <input 
-            type="text" 
-            id="name"
-            required
-            class="w-full border rounded-xl px-3 py-3 focus:outline-none focus:ring-2 focus:ring-slate-900"
-            placeholder="Jane Doe" />
-        </div>
+    <!-- CORE LENSES -->
+    <div class="grid md:grid-cols-3 gap-6 text-center">
+      <div class="p-6 bg-white rounded-2xl shadow">
+        <strong>Execution Economics</strong><br/>
+        Time · Scope · Cost <br/>calibrated to business urgency
+      </div>
+      <div class="p-6 bg-white rounded-2xl shadow">
+        <strong>Architecture Discipline</strong><br/>
+        Scalability · Maintainability · Speed to Market
+      </div>
+      <div class="p-6 bg-white rounded-2xl shadow">
+        <strong>Business First Principle</strong><br/>
+        Solve operational complexity before technical elegance
+      </div>
+    </div>
 
-        <div>
-          <label class="block text-sm font-medium mb-1">Email</label>
-          <input 
-            type="email" 
-            id="email"
-            required
-            class="w-full border rounded-xl px-3 py-3 focus:outline-none focus:ring-2 focus:ring-slate-900"
-            placeholder="jane@email.com" />
-        </div>
-
-        <div>
-          <label class="block text-sm font-medium mb-1">Message</label>
-          <textarea 
-            id="question" 
-            required
-            class="w-full border rounded-xl px-3 py-3 min-h-[120px] focus:outline-none focus:ring-2 focus:ring-slate-900"
-            placeholder="For example: How would you handle a major outage during a peak sale event?"></textarea>
-        </div>
-
-        <button 
-          type="submit"
-          class="w-full px-6 py-3 bg-slate-900 text-white rounded-xl hover:opacity-90 transition">
-          Send Message
-        </button>
-
-        <div id="confirmation" class="hidden p-4 bg-green-50 text-green-700 rounded-xl text-sm">
-          Thank you for reaching out. Your message has been received.
-        </div>
-      </form>
+            <!-- SPEED VS SUSTAINABILITY -->
+    <div class="grid md:grid-cols-2 gap-6 mt-12 text-center">
+      <div class="p-6 bg-white rounded-2xl shadow">
+        <strong>Acceleration</strong><br/>
+        Small, skilled team. Fast decisions. Narrow scope. Rapid impact.
+      </div>
+      <div class="p-6 bg-white rounded-2xl shadow">
+        <strong>Sustainability</strong><br/>
+        Broad alignment. Clear ownership. Structured execution. Built to scale.
+      </div>
     </div>
   </section>
 
-  <footer class="py-16 text-center text-sm text-slate-400 border-t">
-    © 2026 Your Name
+  <!-- ASK ME ANYTHING -->
+  <section class="py-16 max-w-3xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold tracking-tight mb-10 text-center">Ask Me Anything</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6 bg-white p-8 rounded-2xl shadow">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border rounded-xl" />
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border rounded-xl" />
+      <textarea name="message" rows="4" placeholder="Your Question" required class="w-full p-3 border rounded-xl"></textarea>
+      <button type="submit" class="w-full bg-slate-900 text-white py-3 rounded-xl hover:opacity-90 transition">
+        Submit Question
+      </button>
+    </form>
+  </section>
+
+  <footer class="py-10 text-center text-sm text-slate-400 border-t">
+    © 2026 Shefali Chopkar
   </footer>
 
   <script>
-    function setPath(path, e) {
+    const sections = {
+      leadership: `
+        <h2 class="text-3xl font-semibold tracking-tight mb-12 text-center">Leadership</h2>
+        <div class="grid md:grid-cols-3 gap-6 text-center">
+          <div class="p-6 bg-white rounded-2xl shadow">Empathy</div>
+          <div class="p-6 bg-white rounded-2xl shadow">Accountability</div>
+          <div class="p-6 bg-white rounded-2xl shadow">Attention to Detail</div>
+          <div class="p-6 bg-white rounded-2xl shadow">Ambiguity To Clarity</div>
+          <div class="p-6 bg-white rounded-2xl shadow">Bridge Business & Technology</div>
+        </div>
+      `,
+      technology: `
+        <h2 class="text-3xl font-semibold tracking-tight mb-12 text-center">Technology</h2>
+        <div class="grid md:grid-cols-3 gap-6 text-center">
+          <div class="p-6 bg-white rounded-2xl shadow">SAP</div>
+          <div class="p-6 bg-white rounded-2xl shadow">APIs</div>
+          <div class="p-6 bg-white rounded-2xl shadow">DevOps</div>
+          <div class="p-6 bg-white rounded-2xl shadow">Distributed Systems</div>
+          <div class="p-6 bg-white rounded-2xl shadow">Full-Stack Basics</div>
+          <div class="p-6 bg-white rounded-2xl shadow">AI</div>
+        </div>
+      `,
+      people: `
+        <h2 class="text-3xl font-semibold tracking-tight mb-12 text-center">People</h2>
+        <div class="grid md:grid-cols-3 gap-6 text-center">
+          <div class="p-6 bg-white rounded-2xl shadow">3 Teams</div>
+          <div class="p-6 bg-white rounded-2xl shadow">Leading ~20 Engineers</div>
+          <div class="p-6 bg-white rounded-2xl shadow">10+ hired (Intern to Staff engineers, Contingents to Contractors)</div>
+        </div>
+      `,
+      delivery: `
+        <h2 class="text-3xl font-semibold tracking-tight mb-12 text-center">Delivery</h2>
+        <div class="grid md:grid-cols-3 gap-6 text-center">
+          <div class="p-6 bg-white rounded-2xl shadow">Global Rollouts</div>
+          <div class="p-6 bg-white rounded-2xl shadow">Platform Modernization</div>
+          <div class="p-6 bg-white rounded-2xl shadow">System Migrations</div>
+          <div class="p-6 bg-white rounded-2xl shadow">Product Rewrites</div>
+          <div class="p-6 bg-white rounded-2xl shadow">Legacy Decommissioning</div>
+        </div>
+      `
+    };
+
+    function setPath(path, event) {
       document.querySelectorAll('.path-btn').forEach(btn => {
         btn.classList.remove('bg-slate-900','text-white');
         btn.classList.add('bg-white','border');
       });
-      e.target.classList.remove('bg-white','border');
-      e.target.classList.add('bg-slate-900','text-white');
+
+      event.target.classList.remove('bg-white','border');
+      event.target.classList.add('bg-slate-900','text-white');
+
+      document.getElementById('journeyContent').innerHTML = sections[path];
     }
 
-    function focusCard(card) {
-      document.querySelectorAll('.cursor-pointer').forEach(c => c.classList.remove('scale-110','z-10'));
-      card.classList.add('scale-110','z-10');
-    }
-
-    function submitQuestion(event) {
-      event.preventDefault();
-
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('question').value.trim();
-
-      if (!name || !email || !message) return;
-
-            const FORM_URL = "https://docs.google.com/forms/d/1qa1fy_3rZMew_XTHVc-hEFefLS_nooEH0SBUnBRQaww/formResponse"; 
-
-      const formData = new FormData();
-      formData.append("entry.231765535", name);    // <-- replace with Name field ID
-      formData.append("entry.1888294904", email);   // <-- replace with Email field ID
-      formData.append("entry.2000069352", message); // <-- replace with Message field ID
-
-      fetch(FORM_URL, {
-        method: "POST",
-        mode: "no-cors",
-        body: formData
-      });
-
-      document.getElementById('confirmation').classList.remove('hidden');
-      document.getElementById('contactForm').reset();
-    }
+    // Default load
+    document.getElementById('journeyContent').innerHTML = sections['leadership'];
   </script>
 
 </body>
