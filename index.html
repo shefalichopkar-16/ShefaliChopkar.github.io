@@ -3,105 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leadership Profile</title>
+  <title>Interactive Leadership Site</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
   </style>
 </head>
-<body class="bg-white text-slate-900">
+<body class="min-h-screen bg-slate-50 text-slate-800">
 
   <!-- HERO -->
-  <section class="min-h-screen flex items-center justify-center px-6">
-    <div class="max-w-5xl w-full grid md:grid-cols-2 gap-12 items-center">
-      
-      <!-- PHOTO -->
-      <div class="flex justify-center md:justify-end">
-        <img src="profile.jpg" alt="Profile Photo" 
-             class="w-64 h-64 object-cover rounded-2xl shadow-xl" />
-      </div>
-
-      <!-- INTRO -->
-      <div class="space-y-6">
-        <h1 class="text-5xl font-bold tracking-tight">Your Name</h1>
-        <p class="text-xl text-slate-600">Engineering Leader</p>
-        <p class="text-slate-500 leading-relaxed">
-          I build reliable, high-impact systems and develop engineers into confident leaders. 
-          My work sits at the intersection of technology execution, delivery confidence, 
-          and measurable business outcomes.
-        </p>
-        <div class="flex gap-4 pt-4">
-          <a href="mailto:your.email@example.com" 
-             class="px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-700 transition">
-            Contact
-          </a>
-        </div>
-      </div>
-    </div>
+  <section class="h-screen flex flex-col justify-center items-center text-center space-y-4 px-6">
+    <img src="profile.jpg" class="w-40 h-40 object-cover rounded-2xl shadow-lg" />
+    <h1 class="text-5xl font-bold">Your Name</h1>
+    <p class="text-xl text-slate-600">Engineering Manager — Ecommerce Platforms</p>
+    <p class="max-w-xl text-slate-500">
+      I work with engineers to improve reliability, delivery confidence, and customer outcomes in ecommerce systems.
+    </p>
   </section>
 
-  <!-- JOURNEY NAV -->
-  <section class="border-t border-b bg-slate-50">
-    <div class="max-w-4xl mx-auto px-6 py-6 flex justify-center gap-8 text-sm font-medium tracking-wide">
-      <button onclick="showSection('engineer')" class="nav-btn text-slate-900">Engineer</button>
-      <button onclick="showSection('manager')" class="nav-btn text-slate-400">Manager</button>
-      <button onclick="showSection('leader')" class="nav-btn text-slate-400">Leader</button>
-    </div>
+  <!-- JOURNEY SELECTOR -->
+  <section class="sticky top-0 bg-white/80 backdrop-blur border-y py-4 flex justify-center gap-3 z-10">
+    <button onclick="setPath('hiring', event)" class="path-btn px-4 py-2 rounded-xl bg-slate-900 text-white">hiring</button>
+    <button onclick="setPath('recruiter', event)" class="path-btn px-4 py-2 rounded-xl bg-white border">recruiter</button>
+    <button onclick="setPath('engineer', event)" class="path-btn px-4 py-2 rounded-xl bg-white border">engineer</button>
+    <button onclick="setPath('product', event)" class="path-btn px-4 py-2 rounded-xl bg-white border">product</button>
   </section>
 
-  <!-- ENGINEER -->
-  <section id="engineer" class="journey py-24 max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-semibold mb-12">Engineer</h2>
-    <div class="space-y-10">
-      <div>
-        <h3 class="font-semibold text-lg">System Design & Performance</h3>
-        <p class="text-slate-600 mt-2">
-          Designed scalable ecommerce modules with performance-first thinking and clear ownership boundaries.
+  <!-- DECISION APPROACH -->
+  <section class="py-24 max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-10 text-center">Decision Approach</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div onclick="focusCard(this)" class="cursor-pointer p-6 rounded-2xl shadow bg-white transition hover:scale-105">
+        <h3 class="font-semibold">Checkout latency vs feature launch</h3>
+        <p class="text-slate-600">
+          In ecommerce, conversion > feature count. I delayed release to fix p95 latency because revenue loss compounds daily.
         </p>
       </div>
-      <div>
-        <h3 class="font-semibold text-lg">Production Reliability</h3>
-        <p class="text-slate-600 mt-2">
-          Led incident triage, improved observability, and reduced recurring failure patterns.
+      <div onclick="focusCard(this)" class="cursor-pointer p-6 rounded-2xl shadow bg-white transition hover:scale-105">
+        <h3 class="font-semibold">Tech debt vs roadmap pressure</h3>
+        <p class="text-slate-600">
+          I schedule debt like product work. If ignored for 3 sprints, velocity collapse becomes guaranteed future cost.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- MANAGER -->
-  <section id="manager" class="journey hidden py-24 max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-semibold mb-12">Manager</h2>
-    <div class="space-y-10">
-      <div>
-        <h3 class="font-semibold text-lg">Team Scaling</h3>
-        <p class="text-slate-600 mt-2">
-          Built ownership culture, mentored senior engineers, and developed technical decision-makers.
+  <!-- BUSINESS OUTCOMES -->
+  <section class="py-24 max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-10 text-center">Business Outcomes</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div onclick="focusCard(this)" class="cursor-pointer p-6 rounded-2xl shadow bg-white transition hover:scale-105 text-sm space-y-1">
+        <div><b>Problem:</b> Frequent cart failures</div>
+        <div><b>Decision:</b> Introduced ownership + observability</div>
+        <div><b>Outcome:</b> Reduced drop-offs</div>
+      </div>
+      <div onclick="focusCard(this)" class="cursor-pointer p-6 rounded-2xl shadow bg-white transition hover:scale-105 text-sm space-y-1">
+        <div><b>Problem:</b> Slow releases</div>
+        <div><b>Decision:</b> Deployment confidence gates</div>
+        <div><b>Outcome:</b> Predictable launches</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LESSONS LEARNED -->
+  <section class="py-24 max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-10 text-center">Lessons Learned</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div onclick="focusCard(this)" class="cursor-pointer p-6 rounded-2xl shadow bg-white transition hover:scale-105">
+        <h3 class="font-semibold">Protected team too much</h3>
+        <p class="text-slate-600">
+          I filtered stakeholders excessively — team lost business context. Now I expose context early instead of shielding pressure.
         </p>
       </div>
-      <div>
-        <h3 class="font-semibold text-lg">Delivery Confidence</h3>
-        <p class="text-slate-600 mt-2">
-          Introduced release gates, structured tradeoff reviews, and improved predictability across stakeholders.
+      <div onclick="focusCard(this)" class="cursor-pointer p-6 rounded-2xl shadow bg-white transition hover:scale-105">
+        <h3 class="font-semibold">Chased perfect architecture</h3>
+        <p class="text-slate-600">
+          In commerce, timing beats elegance. I now design for iteration not perfection.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- LEADER -->
-  <section id="leader" class="journey hidden py-24 max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-semibold mb-12">Leader</h2>
-    <div class="space-y-10">
-      <div>
-        <h3 class="font-semibold text-lg">Business Alignment</h3>
-        <p class="text-slate-600 mt-2">
-          Technology strategy anchored in revenue impact, customer experience, and long-term capability building.
-        </p>
-      </div>
-      <div>
-        <h3 class="font-semibold text-lg">Growing Leaders</h3>
-        <p class="text-slate-600 mt-2">
-          Focused on context sharing, autonomy with accountability, and building sustainable engineering cultures.
-        </p>
+  <!-- BELIEFS -->
+  <section class="py-24 max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-10 text-center">Evolving Perspectives</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">Good engineers need autonomy</div>
+      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">Clarity > autonomy</div>
+      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">Ownership > clarity</div>
+      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">Context > ownership</div>
+    </div>
+  </section>
+
+  <!-- TEAM HEALTH -->
+  <section class="py-24 max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-10 text-center">Signals I Monitor</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">PR review turnaround</div>
+      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">Silent disengagement</div>
+      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">Incident ownership</div>
+      <div class="p-4 bg-white rounded-2xl shadow hover:scale-105 transition">Decision latency</div>
+    </div>
+  </section>
+
+  <!-- ASK ME -->
+  <section class="max-w-2xl mx-auto py-20 px-6">
+    <div class="rounded-2xl shadow-lg bg-white p-6 space-y-4">
+      <h2 class="text-2xl font-semibold">What would you like to ask me?</h2>
+      <p class="text-slate-600 text-sm">
+        If you have a question about how I approach engineering leadership or ecommerce systems,
+        feel free to send it.
+      </p>
+      <textarea id="question" class="w-full border rounded-xl px-3 py-3 min-h-[120px]"
+        placeholder="For example: How would you handle a major outage during a peak sale event?"></textarea>
+      <button onclick="submitQuestion()" class="px-6 py-3 bg-slate-900 text-white rounded-xl">
+        Send Question
+      </button>
+      <div id="confirmation" class="hidden p-4 bg-green-50 text-green-700 rounded-xl">
+        Thank you. I’ve received your question.
       </div>
     </div>
   </section>
@@ -111,17 +130,25 @@
   </footer>
 
   <script>
-    function showSection(id) {
-      document.querySelectorAll('.journey').forEach(sec => sec.classList.add('hidden'));
-      document.getElementById(id).classList.remove('hidden');
-
-      document.querySelectorAll('.nav-btn').forEach(btn => {
-        btn.classList.remove('text-slate-900');
-        btn.classList.add('text-slate-400');
+    function setPath(path, e) {
+      document.querySelectorAll('.path-btn').forEach(btn => {
+        btn.classList.remove('bg-slate-900','text-white');
+        btn.classList.add('bg-white','border');
       });
+      e.target.classList.remove('bg-white','border');
+      e.target.classList.add('bg-slate-900','text-white');
+    }
 
-      event.target.classList.remove('text-slate-400');
-      event.target.classList.add('text-slate-900');
+    function focusCard(card) {
+      document.querySelectorAll('.cursor-pointer').forEach(c => c.classList.remove('scale-110','z-10'));
+      card.classList.add('scale-110','z-10');
+    }
+
+    function submitQuestion() {
+      const q = document.getElementById('question').value;
+      if(!q) return;
+      document.getElementById('confirmation').classList.remove('hidden');
+      document.getElementById('question').value = '';
     }
   </script>
 
